@@ -1,0 +1,567 @@
+@font-face {
+    font-family: Laguna;
+    src: url("../Fonts/Laguna-Bold_Regular.ttf");}
+@font-face {
+    font-family: bodyTextFont;
+    src: url("../Fonts/NeueHaasUnicaPro-Light.ttf");
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    background-color: #FFFCF9;
+    font-family: bodyTextFont;
+    color: #000;
+    line-height: 1.5;
+    font-size: clamp(12px,16px,18px);
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+/*-------------------------------------------------------      General     -------------------------------------------------------------*/
+::selection {
+    color: #3F2305;
+    background: #DED0B6;
+}
+.title::selection{
+    text-shadow: 3px 3px #FFFCF9;
+}
+.link{
+    text-decoration: none;
+    color: #000;
+}
+.link:hover{
+    color: #952323;
+}
+.title{
+    font-family: Laguna;
+    color: #9F2302;
+    font-size: 10em;
+}
+/*-------------------------------------------------------      Header     -----------------------------------------------------------*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: 12px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 9;
+}
+#link1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60px;
+}
+#link1 > svg{
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+    enable-background:new 0 0 422.96 432;
+}
+#link1:hover > svg{
+    fill: #952323;
+    transform: rotate(-45deg);
+}
+#nav-bar > a::after{
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+    display: block;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: bottom;
+    transition: transform 0.5s ease;
+}
+#nav-bar > a:hover::after{
+    transform: scaleX(1);
+    background-color: #952323;
+}
+#nav-bar {
+    display: flex;
+    align-items:center;
+    justify-content:space-around;
+    width: 20%;
+}
+/*---------------------------------------------------     Draggable button    ------------------------------------------------------------*/
+#draggableButtonHeader{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    border: none;
+    border-radius: 30px;
+    background-color: transparent;
+    cursor: move;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+#draggableButtonTop{
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    top: 180%;
+    left: 180%;
+    transform: translate(-50%, -50%);
+    cursor: auto;
+    z-index: 1;
+    animation: spin 5s linear infinite;
+    transition: all 0.3s ease-in-out;
+}
+#chLang{
+    background-color: transparent;
+    border: none;
+    font-family: Laguna;
+    cursor: pointer;
+    transition: transform 1s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+#draggableButton {
+    position: absolute;
+    cursor: move;
+    padding: 10px;
+    text-align: center;
+    top: 20%;
+    left: 5%;
+}
+.textcircle{
+    transform-origin: 20px 20px;
+    transition: transform 1s cubic-bezier(0.65, 0, 0.35, 1);
+}
+#draggableButtonTop>g:hover{
+    transform: scale(1.2);
+}
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(-360deg); }
+}
+/*-------------------------------------------------------      flower       --------------------------------------------------------------*/
+#flower {
+    fill:#9F2302;
+    position: fixed;
+    top: 10em;
+    right: -35em;
+    width: 70vw;
+    height: 70vh;
+    transform-origin: center center;
+}
+/*----------------------------------------------------      Scroll Down Symbol      --------------------------------------------------------------*/
+#scrollDownSymbol{
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    font-size: 50px;
+    color: rgb(1, 1, 1,0.4);
+    transform: rotate(90deg);
+    transition: opacity 1s ease-in-out;
+    animation: upDown 2s ease-in-out infinite;
+}
+@keyframes upDown{
+    0%{transform: translateY(0px) rotate(90deg);}
+    50%{transform: translateY(10px) rotate(90deg);}
+    100%{transform: translateY(0px) rotate(90deg);}
+}
+/*--------------------------------------------------------   section1      ----------------------------------------------------------------*/
+.s-one{
+    margin-left: 12%;
+    margin-top: 5%;
+    width: 60%;
+    height: 100vh;
+}
+#name{
+    font-size: 1600%;
+    line-height: 1;
+    margin: 0;
+}
+#intro{
+    width: 100%;
+    margin-top: -1em;
+}
+/*--------------------------------------------------------     pop up      ----------------------------------------------------------------*/
+.popup{
+    position: fixed;
+    padding: 20px;
+    top: 90%;
+    left: 50%;
+    width: 50vw;
+    height: 80vh;
+    transform: translate(-50%, -50%);
+    background-color: #f1ebe6;
+    border-radius: 5px;
+}
+.popup > p{
+    width: 100%;
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+.popup[open]{
+    animation: UpAnimation 0.5s forwards;
+}
+.popup[open]::backdrop{
+    animation: FadeIn 0.5s ease;
+}
+.popup[closing]{
+    animation: DownAnimation 0.5s forwards;
+}
+.popup[closing]::backdrop{
+    animation: FadeOut 0.5s ease;
+}
+.paragraph{
+    width: 60%;
+}
+@keyframes UpAnimation {
+    0%{
+        top: 170%;
+    }
+    100%{
+        top: 90%;
+}
+}
+@keyframes DownAnimation {
+    0%{
+        top: 90%;
+    }
+    100%{
+        top: -100%;
+}
+}
+@keyframes FadeOut {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes FadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+/*-------------------------------------------------------      section2     -----------------------------------------------------------*/
+.two{
+    min-height: 100vh;
+}
+#cardsContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-width: 100%;
+}
+.cards-content{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.cardTitle {
+    font-family: Laguna;
+    color: black;
+    font-size: 2.1rem;
+    text-align: center;
+    z-index: 1;
+}
+.learnMore{
+    margin-top: 30px;
+    text-decoration: underline 1px;
+    text-underline-offset: 0.25em;
+    cursor: pointer;
+    z-index: 1;
+}
+.cards{
+    position: relative;
+    width:28vw;
+    height: 70vh;
+    border-radius: 5px;
+    background-color: #DED0B6;
+    transition: width 0.3s ease-in-out,filter 0.3s ease-in-out;
+    overflow: hidden;
+}
+#card1::before, 
+#card2::before, 
+#card3::before{
+    --size: 0;
+    content: "";
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+    background-color: #952323;
+}
+#card1::after, 
+#card2::after, 
+#card3::after{
+    content: "";
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    width:95%;
+    height: 95%;
+    border-radius: 5px;
+    border: dashed 2px #000;
+    transition: all 0.3s ease-in-out;
+}
+#card1:hover::before, 
+#card2:hover::before, 
+#card3:hover::before{
+    --size: 80em;
+}
+#card1:hover > .cards-content > .cardTitle, 
+#card2:hover > .cards-content > .cardTitle,
+#card3:hover > .cards-content > .cardTitle{
+    color: #f1ebe6;
+}
+#card1:hover > .cards-content, 
+#card2:hover > .cards-content,
+#card3:hover > .cards-content{
+    color: #f1ebe6;
+}
+#card1:hover, 
+#card2:hover, 
+#card3:hover{
+    width: 33%;
+    filter: none;
+}
+#card1:hover::after, 
+#card2:hover::after, 
+#card3:hover::after{
+    border: dashed 2px #f1ebe6;
+}
+/*-------------------------------------------------------      section3     -----------------------------------------------------------*/
+#contactForm {
+    width: 33%;
+    margin: 0 ;
+    margin-inline: auto;
+}
+label {
+    display: block;
+    margin-bottom: -2%;
+    position: relative;
+    z-index: 1;
+}
+label::before {
+    content: '';
+    position: absolute;
+    top: 2%;
+    left: 0;
+    width: 7em;
+    height: 105%;
+    background-color: #FFFCF9;
+    z-index: -1;
+}
+input, textarea {
+    display: block;
+    width: 100%;
+    padding: 1em;
+    margin-bottom: 3em;
+    border: solid 1px #000;
+    background-color: #FFFCF9;
+    position: relative;
+    z-index: 0;
+}
+input{
+    font-family: inherit;
+}
+textarea{
+    height: 200px;
+    resize: none;
+    width: 100%;
+}
+input:-webkit-autofill{
+    -webkit-box-shadow: 0 0 0 30px #FFFCF9 inset;
+}
+#buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 106%;
+}
+#submitButton{
+    cursor: pointer;
+    background-color: #FFFCF9;
+    border: solid 1px #000;
+    padding: 10px 0px;
+    width: 10em;
+    text-align: center;
+    font-family: bodyTextFont;
+    margin-bottom: 5%;
+    transition: all 0.3s ease-in-out;
+}
+#submitButton:hover{
+    background-color: #952323;
+    color: #FFFCF9;
+    border: solid 1px #952323;
+    font-weight: bold;
+}
+#resetButton{
+    background-color: #f3eeea;
+    color: #000;
+    font-family: inherit;
+    border: none;
+    text-align: center;
+    padding: 10px 0px;
+    width: 10em;
+    margin-bottom: 5%;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+#resetButton:hover{
+    background-color: #f1ebe6;
+}
+#icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 3%;
+    width: 100%;
+}
+.icon {
+    display: flex;
+    align-items: center;
+    margin: 1em 0.5em;
+    border-radius: 50%;
+    border: solid 1px #000;
+    padding: 0.7em;
+    overflow: hidden;
+    width: 30px;
+    height: 30px;
+}
+.icon svg {
+    width: 100%;
+    height: 100%;
+    transition: fill 0.3s;
+}
+.icon:hover {
+    background-color: #f1ebe6;
+}
+.download{
+    width: 105px;
+    background-color: #952323;
+    text-decoration: none;
+    border-radius: 15px;
+    font-size: smaller;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #FFFCF9;
+    border: solid 1px #FFFCF9;
+    transition: all 0.3s ease-in-out;
+}
+.download svg{
+    max-width: 20%;
+    fill: #FFFCF9;
+}
+.download:hover{
+    background-color: #DED0B6;
+    color: #000;
+    border: solid 1px #000;
+}
+.download:hover svg{
+    fill: #000;
+}
+#confirm_msg{
+    width: 100%;
+    text-align: center;
+}
+/*-------------------------------------------------------      footer     -----------------------------------------------------------*/
+.footer{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    bottom: 0;
+}
+
+/*-------------------------------------------------------      Media query     -----------------------------------------------------------*/
+@media only screen and (max-device-width: 768px) {
+    #name{
+        font-size: 6em;
+        width: 100%;
+    }
+    #intro{
+        width: 90%;
+        margin-top: 5%;
+        font-size: large;
+    }
+    section{
+        margin-left: 5%;
+    }
+    #flower{
+        display: none;
+    }
+    #draggableButton{
+        display: none;
+    }
+    .title{
+        font-size: 5em;
+    }
+    #nav-bar{
+        display: none;
+    }
+    .s-one{
+        margin: 15%;
+        width: 80%;
+        height: max-content;
+    }
+    #cardsContainer{
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content: center;
+        width: 100%;
+        opacity: 1;
+    }
+    .cards{
+        width: 70vw;
+        height: 25vh;
+        margin-top: 5%;
+    }
+    .popup::backdrop{
+        background-color: #00000075;
+    }
+    #card1:hover, #card2:hover, #card3:hover{
+        width: 70vw;
+    }
+    #contactForm{
+        width: 18em;
+    }
+    #buttons{
+        width: 110%;
+    }
+}
+@media only screen and (max-device-width: 600px) {
+    #name{
+        font-size: 5em;
+    }
+    .title{
+        font-size: 3em;
+    }
+}

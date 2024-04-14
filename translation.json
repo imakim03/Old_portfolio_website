@@ -1,0 +1,76 @@
+{
+    "Eng": {
+      "lang": "Eng",
+      "chLangTitle": "Tap to change the language",
+      "aboutLink": "ABOUT",
+      "projectsLink": "POROJECTS",
+      "contactLink": "CONTACT",
+      "about": {
+        "intro1": "Currently, I am a fourth year student at ENSA Marrakech, network system and programmable services sector. Throughout my academic career, I have been particularly intrigued by courses covering advanced networking concepts, such as the course",
+        "intro2": " and in the development field, such as"
+      },
+      "projects": {
+        "title": "Projects",
+        "projectTitle1": "VPN Server",
+        "projectTitle2": "Intrusion detection system",
+        "projectTitle3": "Blog with users",
+        "title1": "VPN Application project",
+        "paragraph1": "The project involved setting up an OpenVPN server on Amazon Web Services (AWS) Cloud Services to enable secure remote access to network resources. This included configuring the necessary infrastructure on AWS, such as deploying an EC2 instance to host the OpenVPN server, configuring security groups and network settings to restrict access, and implementing encryption protocols to ensure data confidentiality. Additionally, the project involved setting up user authentication mechanisms, such as username/password or key authentication, to verify the identity of remote users connecting to the VPN server. By leveraging AWS cloud services, the goal was to provide a scalable and reliable solution for secure remote access to network resources from remote locations, thereby enhancing data confidentiality and security.",
+        "title2": "Intrusion detection system integrated with machine learning project",
+        "paragraph2": "The 'Intrusion Detection System with Machine Learning Integration Using Snort' project was conceived as a solution to bolster network security by leveraging Snort, a widely-used open-source intrusion detection system. The project aimed to enhance Snort's capabilities by integrating machine learning techniques, thereby improving the accuracy of intrusion detection alerts. The development process involved configuring Snort to monitor network traffic in real-time and identify potential security threats based on predefined rulesets. Machine learning algorithms were then implemented to analyze and classify network traffic patterns, enabling the system to adapt and refine its detection mechanisms over time. By combining the robustness of Snort with the predictive capabilities of machine learning, the project sought to provide a more effective and proactive approach to detecting and mitigating network intrusions, ultimately bolstering the overall security posture of the system.",
+        "title3": "Blog with users project",
+        "paragraph3": "The project 'Blog with User Management' was developed using Flask, a Python-based web framework, and Bootstrap, a front-end framework for creating responsive web designs. The goal was to create a dynamic website where users could register, log in, and interact by leaving comments on blog posts. The Flask framework facilitated the creation of user authentication functionalities, allowing users to securely log in and log out of their accounts. Moreover, administrative features were implemented to enable blog management, such as content creation, modification, and deletion, providing administrators with the ability to manage the blog efficiently. This project combined back-end development with Flask for server-side logic and front-end design with Bootstrap for an intuitive user interface, resulting in a functional and user-friendly blog platform.",
+        "learnMore": "Learn More",
+        "moreProjects": "For more projects",
+        "moreProjectsLink": "click here."
+      },
+      "contact": {
+        "title": "Contact me",
+        "form": {
+          "email": "Email",
+          "message": "Message",
+          "submit": "Submit",
+          "reset": "Reset"
+        }
+      },
+      "download": "Download",
+      "msg": "Your message has been sent, thank you for contacting me!"
+    },
+    "Fr": {
+      "lang": "Fr",
+      "chLangTitle": "Appuyez pour changer la langue",
+      "aboutLink": "A PROPOS",
+      "projectsLink": "PROJETS",
+      "contactLink": "CONTACT",
+      "about": {
+        "intro1": "Actuellement, je suis étudiante en quatrième année à l'ENSA Marrakech, filière réseau système et services programmables. Tout au long de mon parcours académique, j'ai été particulièrement intriguée par des cours portant sur des concepts avancés en réseau, tels que le cours",
+        "intro2": " et dans le domaine du développement,"
+      },
+      "projects": {
+        "title": "Projets",
+        "projectTitle1": "Serveur VPN",
+        "projectTitle2": "System de detection d'intrusion",
+        "projectTitle3": "Blog site web",
+        "title1": "Serveur OpenVPN sur AWS Cloud Services",
+        "paragraph1": "Le projet consistait à mettre en place un serveur OpenVPN sur Amazon Web Services (AWS) Cloud Services afin de permettre un accès sécurisé aux ressources réseau à distance. Cela incluait la configuration de l'infrastructure nécessaire sur AWS, comme le déploiement d'une instance EC2 pour héberger le serveur OpenVPN, la configuration des groupes de sécurité et des paramètres réseau pour limiter l'accès, ainsi que l'utilisation de protocoles de chiffrement pour assurer la confidentialité des données. En utilisant les services cloud AWS, l'objectif était de fournir une solution scalable et fiable pour permettre un accès sécurisé aux ressources réseau depuis des emplacements distants, améliorant ainsi la confidentialité et la sécurité des données.",
+        "title2": "Système de Détection d'Intrusion avec Intégration de l' Apprentissage Automatique",
+        "paragraph2": "Le projet 'Système de Détection d'Intrusion avec Intégration de l'Apprentissage Automatique Utilisant Snort' a été conçu comme une solution visant à renforcer la sécurité des réseaux en utilisant Snort, un système de détection d'intrusion open-source largement utilisé. L'objectif du projet était d'améliorer les capacités de Snort en intégrant des techniques d'apprentissage automatique, ce qui permettrait d'améliorer la précision des alertes de détection d'intrusion. Le processus de développement impliquait la configuration de Snort pour surveiller le trafic réseau en temps réel et identifier les menaces potentielles de sécurité en fonction de règles prédéfinies. Des algorithmes d'apprentissage automatique ont ensuite été mis en œuvre pour analyser et classer les schémas de trafic réseau, permettant au système de s'adapter et de peaufiner ses mécanismes de détection au fil du temps. En combinant la robustesse de Snort avec les capacités prédictives de l'apprentissage automatique, le projet visait à fournir une approche plus efficace et proactive pour détecter et atténuer les intrusions réseau, renforçant ainsi la posture globale de sécurité du système.",
+        "title3": "Blog avec Gestion des Utilisateur",
+        "paragraph3": "Le projet 'Blog avec Gestion des Utilisateurs' a été développé en utilisant Flask, un framework web basé sur Python, et Bootstrap, un framework front-end pour la création de designs web réactifs. L'objectif était de créer un site web dynamique où les utilisateurs peuvent s'inscrire, se connecter et interagir en laissant des commentaires sur les articles de blog. Le framework Flask a facilité la création des fonctionnalités d'authentification des utilisateurs, permettant aux utilisateurs de se connecter et de se déconnecter de manière sécurisée de leurs comptes. De plus, des fonctionnalités administratives ont été mises en œuvre pour permettre la gestion du blog, telles que la création, la modification et la suppression de contenu, offrant aux administrateurs la possibilité de gérer le blog efficacement. Ce projet a combiné le développement back-end avec Flask pour la logique côté serveur et la conception front-end avec Bootstrap pour une interface utilisateur intuitive, résultant en une plateforme de blog fonctionnelle et conviviale.",
+        "learnMore": "En savoir plus",
+        "moreProjects": "Pour plus de projets",
+        "moreProjectsLink": "cliquez ici."
+      },
+      "contact": {
+        "title": "Me contacter",
+        "form": {
+          "email": "Email",
+          "message": "Message",
+          "submit": "Envoyer",
+          "reset": "Réinitialisation"
+        }
+      },
+      "download": "Téléchargez",
+      "msg": "Votre message a été envoyé, merci de m'avoir contactée!"
+    }
+  }
