@@ -156,18 +156,14 @@ document.addEventListener("DOMContentLoaded", function() {
 document.getElementById('downloadButton').addEventListener('click', function() {
     var currentLang = document.getElementById('chLang').textContent;
 
-    var filePaths = {
-        'Eng': 'pdf/cv_eng.pdf',
-        'Fr': 'pdf/cv_fr.pdf'
-    }
+    var filePath = './pdf/'
     var fileNames = {
         "Eng": '(eng)Imane_kimissi.pdf',
         "Fr": '(fr)Imane_kimissi.pdf'
     }
-    var filePath = filePaths[currentLang];
     var link = document.createElement('a');
-
-    link.href = filePath;
+    
+    link.href = filePath + fileNames[currentLang];
     link.download = fileNames[currentLang];
     link.target = "_blank";
     document.body.appendChild(link);
