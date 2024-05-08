@@ -1,5 +1,5 @@
 ## Introduction
-&#10020; Welcome to the README for my portfolio website! This document aims to provide you with a comprehensive understanding of the structure, features, and functionalities of the portfolio website I have built using HTML, CSS, and JavaScript.
+Welcome to the README for my portfolio website! This document aims to provide you with a comprehensive understanding of the structure, features, and functionalities of the portfolio website I have built using HTML, CSS, and JavaScript.
 
 __Link__: &nbsp;  [www.imanekimissi.website](www.imanekimissi.website)
 
