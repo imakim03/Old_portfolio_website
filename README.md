@@ -1,7 +1,7 @@
 ## Introduction
 Welcome to the README for my portfolio website! This document aims to provide you with a comprehensive understanding of the structure, features, and functionalities of the portfolio website I have built using HTML, CSS, and JavaScript.
 
-__Link__: &nbsp;  [www.imanekimissi.website](https://www.imanekimissi.website)
+__Link__: &nbsp;  [Live Demo](https://imakim03.github.io/Old_portfolio_website/)
 
 ## Screenshot of the Home Page
 ![screenshot](https://github.com/user-attachments/assets/d952a922-be2d-49fa-b6e0-7795ab705e56)
